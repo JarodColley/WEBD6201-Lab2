@@ -263,8 +263,6 @@ let app;
            span.textContent = userName;
            login.parentNode.insertBefore(span,login);
 
-           console.log(userName);
-
             e.preventDefault();
             e.stopPropagation();
             $("#loginForm")[0].reset();
@@ -360,9 +358,9 @@ let app;
         });
         $("#registerForm").submit  ((e)=>
         {
+            e.preventDefault();
             if(document.getElementById("registerForm").checkValidity() == false)
-            {
-                e.preventDefault();
+            {   
                 e.stopPropagation();
                 console.log("form not valid");
             }
@@ -381,8 +379,9 @@ let app;
             userObject.lastName = lastName;
             userObject.email = email;
             userObject.password = password;
+            userObject.userName = "";
 
-            console.log(contactObject);
+            console.log(userObject);
 
             clearForm();
 
