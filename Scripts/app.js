@@ -1,3 +1,9 @@
+/*
+    Student Name  : Jarod Colley
+    StudentID     : 100704994
+    Date Completed: 2020-02-27
+*/
+
 class Contact
 {
     constructor(contactName = "", emailAddress = "", contactNumber = "", contactMessage = "")
@@ -254,6 +260,7 @@ let app;
     {
         document.title = "WEBD6201 - Login";
 
+        //login button actions
         $("#loginForm").submit  ((e)=>
         {
            let userName = $("#userName").val();
@@ -277,6 +284,7 @@ let app;
     {
         document.title = "WEBD6201 - Register";
 
+        //creates and insertes the error div tag
         let errorMessage = document.createElement("div");
         let main = document.getElementById("contentArea");
         let form = document.getElementById("registerForm");
@@ -285,6 +293,7 @@ let app;
         errorMessage.textContent = "Errors go here";
         main.insertBefore(errorMessage,form);
 
+        //method that clears the register form
         function clearForm()
         {
             //document.getElementById("contactForm").reset();
@@ -292,6 +301,7 @@ let app;
             $("#ErrorMessage").hide();
         }
 
+        //method that validates input given to it 
         function validateInput(selector, condition, errorMessage)
         {
             if(condition)
@@ -308,7 +318,7 @@ let app;
             }
         }
 
-        
+        //hides the error message at the start
         $("#ErrorMessage").hide();
 
         $("#FirstName").blur((e)=>
@@ -356,6 +366,7 @@ let app;
         {
             $("#confirmPassword").select();
         });
+        //submit button actions
         $("#registerForm").submit  ((e)=>
         {
             e.preventDefault();
