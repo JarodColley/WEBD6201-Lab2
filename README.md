@@ -1,3 +1,3 @@
-# WEBD6201-W2020-Lesson 6
+# WEBD6201-Lab2
 
-## demo project for Lesson 6
+## Lab 2 for WEBD6201
