@@ -256,13 +256,14 @@ let app;
 
         $("#loginForm").submit  ((e)=>
         {
-           let userName = document.getElementById("userName").val();
+           let userName = $("#userName").val();
            let login = document.getElementById("login");
            let span = document.createElement("span");
            span.className = "navbar-text";
            span.textContent = userName;
            login.parentNode.insertBefore(span,login);
 
+           console.log(userName);
 
             e.preventDefault();
             e.stopPropagation();
